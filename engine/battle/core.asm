@@ -5717,7 +5717,7 @@ MoveInfoBox:
 	inc hl
 	ld [hl], "/"
 	inc hl
-	ld de, wNamedObjectIndex
+	ld de, wStringBuffer1
 	lb bc, 1, 2
 	call PrintNum
 	ret

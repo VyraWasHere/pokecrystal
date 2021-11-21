@@ -2501,7 +2501,7 @@ RestorePP:
 	ld a, [hl]
 	and PP_MASK
 	cp b
-	jr nc, .dont_restore
+	jp .dont_restore
 
 	ld a, [wTempRestorePPItem]
 	cp MAX_ELIXER
@@ -2912,16 +2912,15 @@ GetMaxPPOfMove:
 .notwild
 	add hl, bc
 	ld a, [hl]
-	and PP_UP_MASK
+	and PP_MASK
 	pop bc
 
-	or b
+	
 	ld hl, wStringBuffer1 + 1
 	ld [hl], a
-	xor a
+	
 	ld [wTempPP], a
 	ld a, b ; this gets lost anyway
-	call ComputeMaxPP
 	ld a, [hl]
 	and PP_MASK
 	ld [wTempPP], a
