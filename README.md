@@ -1,3 +1,5 @@
+This is a modded version of Pokemon Crystal where PP usage is permanent, forked from a disassembly.
+
 # Pokémon Crystal [![Build Status][ci-badge]][ci]
 
 This is a disassembly of Pokémon Crystal.
